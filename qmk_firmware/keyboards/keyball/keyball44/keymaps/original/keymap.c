@@ -71,21 +71,21 @@ void oledkit_render_info_user(void) {
 #endif
 
 
-uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(UTIL, KC_E):
-            return 300;
-        default:
-            return TAPPING_TERM;
-    }
-}
-
-bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case LT(UTIL, KC_E):
-            return true;
-        default:
-            return false;
-    }
-}
-
+// uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case LT(UTIL, KC_E):
+//             return 300;
+//         default:
+//             return TAPPING_TERM;
+//     }
+// }
+//
+// bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case LT(UTIL, KC_E):
+//             return true;
+//         default:
+//             return false;
+//     }
+// }
+//
