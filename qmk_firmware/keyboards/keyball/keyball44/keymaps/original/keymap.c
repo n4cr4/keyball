@@ -69,3 +69,23 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(UTIL, KC_E):
+            return 300;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LT(UTIL, KC_E):
+            return true;
+        default:
+            return false;
+    }
+}
+
