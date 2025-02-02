@@ -1,4 +1,4 @@
-name: Build orignal firmwares
+name: Build original firmwares
 
 on:
   push:
@@ -26,17 +26,11 @@ on:
 jobs:
 
   build:
-
-    strategy:
-      matrix:
-        keyboard: [ keyball44 ]
-        keymap: [ orignal ]
-
     uses: ./.github/workflows/build-firmware.yml
     with:
       qmk_version: '0.22.14'
-      keyboard:    ${{ matrix.keyboard }}
-      keymap:      ${{ matrix.keymap }}
+      keyboard:    'keyball44'
+      keymap:      'original'
 
   check-size:
     name: Check size
